@@ -72,3 +72,9 @@ terraform-azure-lab
 ├── README.md
 └── .gitignore
 ```
+
+# Run the lab
+
+docker compose up -d
+terraform init
+terraform apply
