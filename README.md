@@ -74,7 +74,8 @@ terraform-azure-lab
 ```
 
 # Run the lab
-
+```bash
 docker compose up -d
 terraform init
 terraform apply
+```
