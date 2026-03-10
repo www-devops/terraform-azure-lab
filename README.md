@@ -1,56 +1,74 @@
-\# Terraform Azure Lab
-
-
+# Terraform Azure Lab
 
 Infrastructure-as-Code lab created during my DevOps training.
 
+This project demonstrates how to provision an AWS SQS queue using Terraform while running AWS services locally with LocalStack.
 
+---
 
-\## Stack
+## Stack
 
+- Terraform
+- Docker
+- LocalStack
+- Infrastructure as Code
 
+---
 
-\- Terraform
+## Architecture
 
-\- Docker
+Terraform provisions an AWS SQS queue using LocalStack.
 
-\- LocalStack
+LocalStack allows running AWS services locally without accessing real AWS resources.
 
-\- Infrastructure as Code
+---
 
+## Start LocalStack
 
+```bash
+docker compose up -d
+```
 
-\## Files
+---
 
+## Terraform workflow
 
+### Initialize
 
-main.tf  
+```bash
+terraform init
+```
 
-Main Terraform configuration
+### Plan infrastructure
 
+```bash
+terraform plan
+```
 
+### Apply infrastructure
 
-variables.tf  
+```bash
+terraform apply
+```
 
-Variable definitions
+### Destroy infrastructure
 
+```bash
+terraform destroy
+```
 
+---
 
-terraform.tfvars  
+## Project structure
 
-Variable values used for the lab
-
-
-
-docker-compose.yml  
-
-LocalStack environment used for testing
-
-
-
-\## Goal
-
-
-
-Practice provisioning infrastructure and managing Terraform workflows.
-
+```text
+terraform-azure-lab
+├── main.tf
+├── providers.tf
+├── variables.tf
+├── outputs.tf
+├── terraform.tfvars
+├── docker-compose.yml
+├── README.md
+└── .gitignore
+```
